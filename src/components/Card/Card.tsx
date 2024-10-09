@@ -1,9 +1,16 @@
 import decoration from '../..//assets/images/drawers.jpg';
 import styles from './Card.module.css';
-import Author from './Author/Author';
-import ShareSection from './ShareSection/ShareSection';
+import ActiveSection from './ActiveSection/ActiveSection';
+import { useState } from 'react';
+import Profile from './Profile/Profile';
 
 export default function Card() {
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleActive = () => {
+    setIsActive(!isActive);
+  };
+
   return (
     <div className={styles.container}>
       <img
@@ -21,9 +28,15 @@ export default function Card() {
           felt slightly bare and uninviting. I've got some simple tips to help
           you make any room feel complete.
         </p>
-        <Author />
-        <ShareSection />
+
+        {/* <Author toggleActive={toggleActive} />
+        <ActiveSection toggleActive={toggleActive} /> */}
       </div>
+      {isActive ? (
+        <ActiveSection toggleActive={toggleActive} />
+      ) : (
+        <Profile toggleActive={toggleActive} />
+      )}
     </div>
   );
 }
