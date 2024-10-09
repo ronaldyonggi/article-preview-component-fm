@@ -1,0 +1,15 @@
+@import './fonts.css';
+@import './variables.css';
+
+body {
+  font-family: var(--font-family-manrope);
+  font-size: var(--font-size-body);
+  background-color: var(--color-light-grayish-blue);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}

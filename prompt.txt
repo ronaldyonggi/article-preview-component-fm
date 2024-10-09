@@ -1,0 +1,2 @@
+I've coded a ShareIcon component, which is the React component version of the icon-share svg that's located in src/assets/images/icon-shares.svg.
+Now help me code similar components for the rest of the icons (facebook, twitter, pinterest)

@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.authorName {
+  color: var(--color-very-dark-grayish-blue);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.date {
+  color: var(--color-grayish-blue);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.authorImage {
+  border-radius: 50%;
+  max-width: 3rem;
+}

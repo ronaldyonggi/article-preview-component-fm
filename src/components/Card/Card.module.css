@@ -1,0 +1,32 @@
+.container {
+  border-radius: 4px;
+  background-color: white;
+  margin: 0.2vh 5vw;
+  /* Ensure image doesn't overflow rounder corner */
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.content {
+  padding: 1rem 1.5rem;
+}
+
+.title {
+  color: var(--color-very-dark-grayish-blue);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.description {
+  color: var(--color-desaturated-dark-blue);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
