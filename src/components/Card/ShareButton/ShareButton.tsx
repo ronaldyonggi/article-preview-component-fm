@@ -2,13 +2,20 @@ import styles from './ShareButton.module.css';
 
 interface ShareButtonProps {
   isActive: boolean;
+  toggleActive: () => void;
 }
 
-export default function ShareButton({ isActive }: ShareButtonProps) {
+export default function ShareButton({
+  isActive,
+  toggleActive,
+}: ShareButtonProps) {
   const fill = isActive ? '#FFF' : '#6E8098';
 
   return (
-    <button className={styles.button}>
+    <button
+      className={`${styles.button} ${isActive && styles.buttonActive}`}
+      onClick={toggleActive}
+    >
       <svg xmlns='http://www.w3.org/2000/svg' width='15' height='13'>
         <path
           fill={fill}
