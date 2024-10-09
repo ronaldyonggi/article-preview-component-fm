@@ -1,10 +1,15 @@
 import avatar from '../../../assets/images/avatar-michelle.jpg';
 import ShareButton from '../ShareButton/ShareButton';
-import styles from './Author.module.css';
+import styles from './Profile.module.css';
+import parentStyles from '../Card.module.css';
 
-export default function Author() {
+interface ProfileProps {
+  toggleActive: () => void;
+}
+
+export default function Profile({ toggleActive }: ProfileProps) {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${parentStyles.footerContainer}`}>
       <img
         src={avatar}
         alt='Avatar of Michelle'
@@ -14,7 +19,7 @@ export default function Author() {
         <p className={styles.authorName}>Michelle Appleton</p>
         <p className={styles.date}>28 Jun 2020</p>
       </div>
-      <ShareButton isActive={false} />
+      <ShareButton isActive={false} toggleActive={toggleActive} />
     </div>
   );
 }
