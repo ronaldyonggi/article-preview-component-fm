@@ -1,0 +1,20 @@
+.container {
+  background-color: var(--color-very-dark-grayish-blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.shareSection {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.shareText {
+  color: var(--color-grayish-blue);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
