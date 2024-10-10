@@ -29,8 +29,6 @@ export default function Card() {
           you make any room feel complete.
         </p>
 
-        {/* <Author toggleActive={toggleActive} />
-        <ActiveSection toggleActive={toggleActive} /> */}
       </div>
       {isActive ? (
         <ActiveSection toggleActive={toggleActive} />
