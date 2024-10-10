@@ -11,6 +11,10 @@
   line-height: 1.5;
 }
 
+img {
+  width: 2.5rem;
+}
+
 .date {
   color: var(--color-grayish-blue);
   font-size: 0.75rem;
