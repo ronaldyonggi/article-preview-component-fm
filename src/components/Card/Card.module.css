@@ -36,3 +36,19 @@
   height: 4rem;
   padding: 2rem;
 }
+
+@media screen and (min-width: 400px) {
+  .container {
+    display: flex;
+  }
+
+  .image{
+    height: 100%;
+  }
+
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
