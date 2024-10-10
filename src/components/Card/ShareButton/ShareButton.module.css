@@ -1,3 +1,7 @@
+.container {
+  position: relative;
+}
+
 .button {
   border: none;
   border-radius: 50%;
@@ -8,8 +12,35 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .buttonActive {
   background-color: var(--color-desaturated-dark-blue);
+}
+
+.shareSection {
+  position: absolute;
+  background-color: var(--color-very-dark-grayish-blue);
+  display: flex;
+  align-items: center;
+  right: 0;
+  bottom: 100%;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  gap: 1rem;
+}
+
+
+.shareText {
+  color: var(--color-grayish-blue);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+.icon {
+  width: 1rem;
 }

@@ -22,6 +22,7 @@
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
+  margin-top: 1rem;
 }
 
 .description {
@@ -32,7 +33,40 @@
   margin-top: 0.5rem;
 }
 
-.footerContainer {
-  height: 4rem;
-  padding: 2rem;
+.authorInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 2px solid red; */
+  margin-top: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.authorImage {
+  border-radius: 50%;
+  width: 2.5rem;
+}
+
+.authorName {
+  color: var(--color-very-dark-grayish-blue);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.date {
+  color: var(--color-grayish-blue);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 400px) {
+  .container {
+    display: flex;
+  }
+
+  .content {
+    flex: 1;
+  }
 }
