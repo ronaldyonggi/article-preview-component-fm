@@ -19,17 +19,29 @@ describe('Card', () => {
     expect(screen.getByText('Michelle Appleton')).toBeDefined();
     expect(screen.getByText('28 Jun 2020')).toBeDefined();
   });
+
+  it('toggles between Profile and ActiveSection when share button is clicked', async () => {
     render(<Card />);
-    
-    // Find the share button
-    const shareButton = screen.getByLabelText('Share');
-    
-    // Click the share button
+    let shareButton = screen.getByLabelText('Share');
+
+    // Initially, Profile should be visible
+    expect(screen.getByText('Michelle Appleton')).toBeDefined();
+
+    // Click share button
     await userEvent.click(shareButton);
-    
-    // Check if social media icons are displayed
+
+    // Now, ActiveSection should be visible
     expect(screen.getByLabelText('Share on Facebook')).toBeDefined();
     expect(screen.getByLabelText('Share on Twitter')).toBeDefined();
     expect(screen.getByLabelText('Share on Pinterest')).toBeDefined();
+
+    // After toggle state, find the button labeled Share again
+    shareButton = screen.getByLabelText('Share');
+
+    // Click share button again
+    await userEvent.click(shareButton);
+
+    // Profile should be visible again
+    expect(screen.getByText('Michelle Appleton')).toBeDefined();
   });
 });
