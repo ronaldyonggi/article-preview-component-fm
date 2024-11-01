@@ -4,9 +4,14 @@ import userEvent from '@testing-library/user-event';
 import Card from './Card';
 
 describe('Card', () => {
-  it('renders the card title', () => {
+  it('renders the correct card content', () => {
     render(<Card />);
     expect(screen.getByText(/Shift the overall look and feel/i)).toBeDefined();
+    expect(
+      screen.getByText(
+        /Ever been in a room and felt like something was missing?/i
+      )
+    ).toBeDefined();
   });
 
   it('displays share options when share button is clicked', async () => {
