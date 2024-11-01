@@ -14,7 +14,11 @@ describe('Card', () => {
     ).toBeDefined();
   });
 
-  it('displays share options when share button is clicked', async () => {
+  it('renders the Profile component by default', () => {
+    render(<Card />);
+    expect(screen.getByText('Michelle Appleton')).toBeDefined();
+    expect(screen.getByText('28 Jun 2020')).toBeDefined();
+  });
     render(<Card />);
     
     // Find the share button
